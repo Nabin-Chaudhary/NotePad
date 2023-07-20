@@ -1,0 +1,153 @@
+@charset "ISO-8859-1";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+body{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0)),url('../images/library.jpg');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 6%;
+    /* border: 1px solid white; */
+    background-color: #4C4B16;
+}
+.navbar .logo{
+    display: flex; 
+    align-items: center;
+    font-size: 30px;
+    color: green;
+}
+.navbar .logo a{
+    text-decoration: none;
+    color: green;
+}
+.navbar .logo .img{
+    padding-right: 10px;
+}
+.navbar .navlinks{
+    display: flex;
+    align-items: center;
+}
+
+.navlinks a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
+    
+    
+}
+
+.navlinks a::after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    display: block;
+    background: green;
+    margin: auto;
+}
+.navlinks a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.navlinks a:hover{
+    color: green;
+    transition: 0.5s;
+}
+
+
+.navlinks a .img{
+    font-size: 23px;
+    padding-right: 7px;
+        
+}
+.navlinks a div{
+    display: inline-block;
+}
+.navlinks a h3{
+    font-size: 23px;
+}
+.navbar .btn{
+    display: flex;
+    align-items: center;
+}
+.navbar .btn a{
+    text-decoration: none;
+    color:white;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    /* border: 1px solid; */
+    border-radius: 8px;
+    background: green;
+    margin-left: 10px;
+}
+.navbar .btn a:hover{
+    background-color: white;
+    color: green;
+    transition: 0.5s;
+}
+
+.btn a .img{
+    margin-right: 10px;
+}
+
+
+/* body code */
+
+.body{
+    /* border: 1px solid white; */
+    backdrop-filter: brightness(60%);
+    border-radius: 20px;
+    width: 60%;
+    margin: 100px auto;
+    text-align: center;
+    color: green;
+
+}
+.body .img{
+    font-size: 53px;
+}
+
+
+.body .btn{
+    display: flex;
+    justify-content: center;
+    /* padding: 2% 10%; */
+    align-items: center;
+}
+.body .btn a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    padding: 10px 15px;
+    /* border: 1px solid white; */
+    border-radius: 8px;
+    background: green;
+    margin: 20px 10px;
+}
+.body .btn a:hover{
+    color: green;
+    background: white;
+    transition: 0.5s;
+}
+.body .btn a .img{
+    font-size: 23px;
+}
+
+

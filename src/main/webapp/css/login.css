@@ -1,0 +1,165 @@
+@charset "ISO-8859-1";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+body{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0)),url('../images/library.jpg');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 6%;
+    /* border: 1px solid white; */
+    background-color: #4C4B16;
+}
+.navbar .logo{
+    display: flex; 
+    align-items: center;
+    font-size: 30px;
+    color: green;
+}
+.navbar .logo a{
+    text-decoration: none;
+    color: green;
+}
+.navbar .logo .img{
+    padding-right: 10px;
+}
+.navbar .navlinks{
+    display: flex;
+    align-items: center;
+}
+
+.navlinks a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
+    
+    
+}
+
+.navlinks a::after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    display: block;
+    background: green;
+    margin: auto;
+}
+.navlinks a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.navlinks a:hover{
+    color: green;
+    transition: 0.5s;
+}
+
+
+.navlinks a .img{
+    font-size: 23px;
+    padding-right: 7px;
+        
+}
+.navlinks a div{
+    display: inline-block;
+}
+.navlinks a h3{
+    font-size: 23px;
+}
+.navbar .btn{
+    display: flex;
+    align-items: center;
+}
+.navbar .btn a{
+    text-decoration: none;
+    color:white;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    /* border: 1px solid; */
+    border-radius: 8px;
+    background: green;
+    margin-left: 10px;
+}
+.navbar .btn a:hover{
+    background-color: white;
+    color: green;
+    transition: 0.5s;
+}
+
+.btn a .img{
+    margin-right: 10px;
+}
+
+
+
+/* code of body */
+
+.body{
+    color: white;
+    /* border: 1px solid white; */
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    width: 30%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.body .logo{
+    color: green;
+}
+.body .logo .img{
+    font-size: 33px;
+    margin: 10px 0;
+    padding-top: 10px;
+    /* border: 1px solid white; */
+}
+.body .logo .text{
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.body .form .box{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2% 8%;
+}
+.form .box input{
+    width: 230px;
+    height: 30px;
+    padding-left: 20px ;
+    font-size: 18px;
+}
+.form .box label{
+    font-size: 23px;
+    color: grey;
+}
+.form .btn input{
+    font-size: 23px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 20px 10px;
+    background:green;
+    color: white;
+}
+.form .btn input:hover{
+
+    color: green;
+    background:white;
+    transition: 0.5s;
+}
