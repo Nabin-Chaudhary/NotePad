@@ -1,25 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ page import = "com.model.User" %>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<link rel="stylesheet" href="../css/home.css">
-<script src="https://kit.fontawesome.com/eed335ca78.js"
-	crossorigin="anonymous"></script>
+<title>Add Notes!!</title>
+<link rel="stylesheet" href="../css/AddNotes.css">
+    <script src="https://kit.fontawesome.com/eed335ca78.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<% User user = (User)session.getAttribute("user");
-	if(user != null){
-		response.sendRedirect("Home.jsp");
-	}
-%>
-
-	 
-	<header>
+<header>
 		<div class="navbar">
 			<div class="logo">
 				<div class="img">
@@ -54,14 +45,14 @@
 				</a>
 			</div>
 			<div class="btn">
-				<a href="login.jsp">
+				<a href="Login.jsp">
 					<div class="img">
 						<i class="fa-solid fa-right-to-bracket"></i>
 					</div>
 					<div class="text">
 						<h3>Login</h3>
 					</div>
-				</a> <a href="register.jsp">
+				</a> <a href="Register.jsp">
 					<div class="img">
 						<i class="fa-solid fa-address-book"></i>
 					</div>
@@ -72,34 +63,32 @@
 			</div>
 		</div>
 	</header>
-	
-	<div class="body">
-		<div class="img">
-			<i class="fa-solid fa-address-book"></i>
-		</div>
-		<div class="text">
-			<h1>E-Notes | Save your text.</h1>
-		</div>
-		<!-- code of buttons -->
-		<div class="btn">
-			<a href="AddNotes.jsp">
-				<div class="img">
-					<i class="fa-solid fa-right-to-bracket"></i>
-				</div>
-				<div class="text">
-					<h3>Add Notes</h3>
-				</div>
-			</a> <a href="#">
-				<div class="img">
-					<i class="fa-solid fa-address-book"></i>
-				</div>
-				<div class="text">
-					<h3>Show Notes</h3>
-				</div>
-			</a>
-		</div>
-	</div>
-	 
+
+    <div class="body">
+        <div class="content">
+            <div class="text">
+                <h1 style=color:white;>Add Your Notes</h1>
+            </div>      
+
+            <form action="">
+
+                <div class="form">
+                    <div class="name">
+                        <label for="">Note Title:</label>
+                        <input type="text" name="noteName">
+                    </div>
+                    <div class="note-content">
+                        <label for="">Note Content</label>
+                        <textarea name="noteContent" cols="35" rows="9" placeholder="Enter your content here"></textarea>
+                    </div>
+                    <div class="btn">
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
 
 </body>
 </html>

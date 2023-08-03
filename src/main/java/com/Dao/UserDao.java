@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 
 import javax.servlet.http.HttpSession;
 
+import com.encryption.PasswordEncryption;
 import com.model.User;
 
 public class UserDao {
@@ -26,7 +27,7 @@ public class UserDao {
 
 			pst.setString(1, us.getName());
 			pst.setString(2, us.getEmail());
-			pst.setString(3, us.getPassword());
+			pst.setString(3, PasswordEncryption.encrypt(us.getPassword(), "my-Secret-Key-is"));
 
 			int result = pst.executeUpdate();
 
@@ -48,7 +49,7 @@ public class UserDao {
 			String query = "select * from user where Email=? and Password=?";
 			PreparedStatement pst = con.prepareStatement(query);
 			pst.setString(1, us.getEmail());
-			pst.setString(2, us.getPassword());
+			pst.setString(2, PasswordEncryption.encrypt(us.getPassword(), "my-Secret-Key-is"));
 			
 			ResultSet rs = pst.executeQuery();
 			

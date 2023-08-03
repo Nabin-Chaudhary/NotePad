@@ -105,49 +105,70 @@ body{
     margin-right: 10px;
 }
 
-
-/* body code */
-
 .body{
-    /* border: 1px solid white; */
-    backdrop-filter: brightness(60%);
-    border-radius: 20px;
-    margin: 400px auto;
-    width: 60%;
-    text-align: center;
-    color: green;
-
-}
-.body .img{
-    font-size: 53px;
-}
-
-
-.body .btn{
+    background: url('Book.jpg');
+    width: 100%;
+    height:43.9rem ;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
-    /* padding: 2% 10%; */
-    align-items: center;
 }
-.body .btn a{
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 23px;
-    padding: 10px 15px;
-    /* border: 1px solid white; */
+.content{
+    border: 1px solid green;
+    margin: 90px auto;
+    width: 40%;
+    text-align: center;
     border-radius: 8px;
-    background: green;
-    margin: 20px 10px;
+    backdrop-filter: blur(20px);
+    
 }
-.body .btn a:hover{
-    color: green;
-    background: white;
-    transition: 0.5s;
-}
-.body .btn a .img{
+.content .text{
     font-size: 23px;
+    font-family: sans-serif;
+    margin: 10px 0;
+}
+.form .name{
+    display: inline-block;
+    padding: 20px;
+    font-size: 23px;
+    font-family: sans-serif;
+    color: white;
+    margin-bottom: 20px;
+    
+}
+.form .name input{
+    width: 250px;
+    height: 25px;
+    margin-left: 20px;
+}
+.form .note-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+    font-size: 23px;
+    color: white;
+    
 }
 
-
+.note-content textarea{
+    font-size: 23px;
+    padding: 0 0 0 10px;
+}
+.form .btn{
+    margin-top: 20px;
+}
+.form .btn input{
+    font-size: 29px;
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+}
+.form .btn input:hover{
+    background-color: green;
+    color: white;
+    transition: 0.8s;
+}

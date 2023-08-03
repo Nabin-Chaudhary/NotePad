@@ -12,6 +12,13 @@
 </head>
 <body>
 
+<%
+User user = (User)session.getAttribute("useer");
+if(user != null){
+	response.sendRedirect("Home.jsp");
+}
+%>
+
 
 
 	<header>
@@ -49,14 +56,14 @@
 				</a>
 			</div>
 			<div class="btn">
-				<a href="Login.jsp">
+				<a href="login.jsp">
 					<div class="img">
 						<i class="fa-solid fa-right-to-bracket"></i>
 					</div>
 					<div class="text">
 						<h3>Login</h3>
 					</div>
-				</a> <a href="Register.jsp">
+				</a> <a href="register.jsp">
 					<div class="img">
 						<i class="fa-solid fa-address-book"></i>
 					</div>

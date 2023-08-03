@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 
 <%@ page import = "com.model.User" %>
+<%@ page import = "com.encryption.PasswordEncryption" %>
+
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -18,7 +20,7 @@
 	User user = (User)session.getAttribute("user");
 
 	if(user != null){
-		response.sendRedirect("login.jsp");
+		response.sendRedirect("Home.jsp");
 		
 	}
 
@@ -59,14 +61,14 @@
 				</a>
 			</div>
 			<div class="btn">
-				<a href="Login.jsp">
+				<a href="login.jsp">
 					<div class="img">
 						<i class="fa-solid fa-right-to-bracket"></i>
 					</div>
 					<div class="text">
 						<h3>Login</h3>
 					</div>
-				</a> <a href="Register.jsp">
+				</a> <a href="#">
 					<div class="img">
 						<i class="fa-solid fa-address-book"></i>
 					</div>
@@ -143,6 +145,17 @@
 		</div>
 
 	</div>
+	
+	<%
+	String pwdEncrypt = request.getParameter("password");
+	if(pwdEncrypt != null){
+		String encryptMsg = PasswordEncryption.encrypt(pwdEncrypt,"my-Secret-Key-hi");
+		%>
+		<%=pwdEncrypt %>
+		<% 
+	}
+	
+	%>
 
 </body>
 </html>

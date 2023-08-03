@@ -84,6 +84,7 @@ body{
     display: flex;
     align-items: center;
 }
+
 .navbar .btn a{
     text-decoration: none;
     color:white;
@@ -101,9 +102,22 @@ body{
     transition: 0.5s;
 }
 
-.btn a .img{
-    margin-right: 10px;
+.btn form input{
+	margin-left:10px;
+	width:100px;
+	height:40px;
+	font-size:23px;
+	border-radius:8px;
+	
 }
+
+.btn form input:hover{
+	background:green;
+	color:white;
+	transition: 0.5s;
+}
+
+
 
 
 /* body code */
@@ -112,42 +126,10 @@ body{
     /* border: 1px solid white; */
     backdrop-filter: brightness(60%);
     border-radius: 20px;
-    margin: 400px auto;
     width: 60%;
+    margin: 100px auto;
     text-align: center;
     color: green;
+    font-size:23px;
 
 }
-.body .img{
-    font-size: 53px;
-}
-
-
-.body .btn{
-    display: flex;
-    justify-content: center;
-    /* padding: 2% 10%; */
-    align-items: center;
-}
-.body .btn a{
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 23px;
-    padding: 10px 15px;
-    /* border: 1px solid white; */
-    border-radius: 8px;
-    background: green;
-    margin: 20px 10px;
-}
-.body .btn a:hover{
-    color: green;
-    background: white;
-    transition: 0.5s;
-}
-.body .btn a .img{
-    font-size: 23px;
-}
-
-

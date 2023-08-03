@@ -106,20 +106,23 @@ body{
 }
 
 
+
 /* body code */
 
 .body{
     /* border: 1px solid white; */
     backdrop-filter: brightness(60%);
     border-radius: 20px;
-    margin: 400px auto;
     width: 60%;
+    height:200px;
+    margin: 200px auto;
     text-align: center;
     color: green;
 
 }
 .body .img{
     font-size: 53px;
+    
 }
 
 
@@ -149,5 +152,4 @@ body{
 .body .btn a .img{
     font-size: 23px;
 }
-
 
