@@ -12,7 +12,13 @@
 </head>
 <body>
 
-<%User user = (User)session.getAttribute("user");%>
+<%User user = (User)session.getAttribute("user");
+if(user == null){
+	response.sendRedirect("login.jsp");
+}
+
+
+%>
 
 	 
 	<header>
@@ -57,7 +63,7 @@
 					<div class="text">
 						<h3><%=user.getName() %></h3>
 					</div>
-				</a> <a href="#">
+				</a> <a href="../LogOutServlet">
 					<div class="img">
 						<i class="fa-solid fa-address-book"></i>
 					</div>

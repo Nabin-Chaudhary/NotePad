@@ -17,6 +17,9 @@ User user = (User)session.getAttribute("user");
 if(user != null){
 	response.sendRedirect("Home.jsp");
 }
+if(user == null){
+	response.sendRedirect("login.jsp");
+}
 %>
 
 
