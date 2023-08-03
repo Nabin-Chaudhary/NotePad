@@ -1,21 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <%@ page import = "com.model.User" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<link rel="stylesheet" href="../css/home.css">
-<script src="https://kit.fontawesome.com/eed335ca78.js"
-	crossorigin="anonymous"></script>
+<title>Profile</title>
+<link rel="stylesheet" href="../css/profile.css">
+    <script src="https://kit.fontawesome.com/eed335ca78.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<%User user = (User)session.getAttribute("user");%>
+<% User user = (User)session.getAttribute("user"); %>
 
-	 
-	<header>
+	 <header>
 		<div class="navbar">
 			<div class="logo">
 				<div class="img">
@@ -55,7 +53,7 @@
 						<i class="fa-solid fa-right-to-bracket"></i>
 					</div>
 					<div class="text">
-						<h3><%=user.getName() %></h3>
+						<h3></h3>
 					</div>
 				</a> <a href="#">
 					<div class="img">
@@ -74,28 +72,28 @@
 			<i class="fa-solid fa-address-book"></i>
 		</div>
 		<div class="text">
-			<h1>E-Notes | Save your text.</h1>
+			<h1>Profile</h1>
 		</div>
 		<!-- code of buttons -->
-		<div class="btn">
-			<a href="AddNotes.jsp">
-				<div class="img">
-					<i class="fa-solid fa-right-to-bracket"></i>
-				</div>
-				<div class="text">
-					<h3>Add Notes</h3>
-				</div>
-			</a> <a href="#">
-				<div class="img">
-					<i class="fa-solid fa-address-book"></i>
-				</div>
-				<div class="text">
-					<h3>Show Notes</h3>
-				</div>
-			</a>
+        <hr>
+        <div class="info">
+            <label for="">ID</label>
+            <label for=""><%=user.getId() %></label>
+        </div>
+        <div class="info">
+            <label for="">Email</label>
+            <label for=""><%=user.getEmail() %></label>
+        </div>
+        <div class="info">
+            <label for="">Name</label>
+            <label for=""><%=user.getName() %></label>
+        </div>
+        <div class="btn">
+			<a href="Home.jsp">Close</a>
 		</div>
+		
 	</div>
-	 
+	
 
 </body>
 </html>

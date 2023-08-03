@@ -13,7 +13,7 @@
 <body>
 
 <%
-User user = (User)session.getAttribute("useer");
+User user = (User)session.getAttribute("user");
 if(user != null){
 	response.sendRedirect("Home.jsp");
 }
