@@ -33,7 +33,7 @@
 					<i class="fa-solid fa-graduation-cap"></i>
 				</div>
 				<div class="text">
-					<a href="index.jsp">ENotes</a>
+					<a href="../index.jsp">ENotes</a>
 				</div>
 			</div>
 			<div class="navlinks">
@@ -109,8 +109,6 @@
 					session.removeAttribute("regMsg");
 				}
 				%>
-
-
 
 
 				<div class="box">

@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import = "com.model.User" %>    
+<%@ page import = "com.model.Content" %>
+<%@ page import = "com.Dao.ContentDao" %>
+<%@ page import = "com.Db.DbConnection" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,11 +17,19 @@
 
 <%
 User user = (User)session.getAttribute("user");
+Integer noteId = Integer.parseInt(request.getParameter("note_id"));
 if(user == null){
 	HttpSession logSession = request.getSession();
 	logSession.setAttribute("logMsg","Please Login!!");
 	response.sendRedirect(request.getContextPath()+"/pages/login.jsp");
 }
+%>
+
+
+<%
+ContentDao cd1 = new ContentDao(DbConnection.getConnection());
+Content cont =cd1.getDataById(noteId);
+
 %>
 
 <header>
@@ -90,25 +102,25 @@ if(user == null){
                 <h1 style=color:white;>Add Your Notes</h1>
             </div>      
 
-            <form action="../AddContentServlet" method="post">
+            <form action="../EditServlet" method="post">
 
                 <div class="form">
                 <%
                 if(user != null){
                 	%>
                 	
-                	<input type="hidden" value="<%=user.getId() %>" name="uId"><br>
+                	<input type="hidden" value="<%=noteId %>" name="noteId"><br>
                 	<% 
                 	
                 }
                 %>
                     <div class="name">
                         <label for="">Note Title:</label>
-                        <input type="text" name="noteName">
+                        <input type="text" name="noteName" value="<%=cont.getTitle() %>">
                     </div>
                     <div class="note-content">
                         <label for="">Note Content</label>
-                        <textarea name="noteContent" cols="35" rows="9" placeholder="Enter your content here"></textarea>
+                        <textarea name="noteContent" cols="35" rows="9" placeholder="Enter your content here"><%=cont.getContent() %></textarea>
                     </div>
                     <div class="btn">
                         <input type="submit" value="Submit">

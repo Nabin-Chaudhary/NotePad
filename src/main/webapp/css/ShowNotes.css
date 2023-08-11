@@ -1,0 +1,138 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+body{
+    background-color: grey;
+    max-width: 100%;
+    overscroll-behavior: none ;
+       
+}
+header{
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 6%;
+    background-color: #4C4B16;
+    
+    
+}
+.navbar .logo{
+    display: flex; 
+    align-items: center;
+    font-size: 30px;
+    color: green;
+}
+.navbar .logo a{
+    text-decoration: none;
+    color: green;
+}
+.navbar .logo .img{
+    padding-right: 10px;
+}
+.navbar .navlinks{
+    display: flex;
+    align-items: center;
+}
+
+.navlinks a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
+    
+    
+}
+
+.navlinks a::after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    display: block;
+    background: green;
+    margin: auto;
+}
+.navlinks a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.navlinks a:hover{
+    color: green;
+    transition: 0.5s;
+}
+
+
+.navlinks a .img{
+    font-size: 23px;
+    padding-right: 7px;
+        
+}
+.navlinks a div{
+    display: inline-block;
+}
+.navlinks a h3{
+    font-size: 23px;
+}
+.btns{
+    display: flex;
+    align-items: center;
+}
+
+.btns a{
+    text-decoration: none;
+    background-color: green;
+    color: white;
+    display: inline-block;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 0 8px;
+    position: relative;
+    border: 1px solid green;
+    border-radius: 8px;
+    
+}
+
+.btns a:hover{
+    color: green;
+    background-color: white;
+    transition: 0.8s;
+
+
+    
+}
+
+.btns a .img{
+    font-size: 19px;
+    padding-right: 7px;
+        
+}
+
+.btns a div{
+    display: inline-block;
+}
+.btns a h3{
+    font-size: 19px;
+}
+
+.body{
+    width: 60%;
+    /* height: 200px; */
+    border:1px solid black;
+    border-radius: 8px ;
+    margin: 100px auto;
+    overflow: hidden;
+}

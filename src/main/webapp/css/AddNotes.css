@@ -12,6 +12,7 @@ body{
     height: 100vh;
     background-position: center;
     background-size: cover;
+    overflow:hidden;
 }
 .navbar{
     display: flex;
@@ -106,13 +107,10 @@ body{
 }
 
 .body{
-    background: url('Book.jpg');
+    
     width: 100%;
     height:43.9rem ;
     position: relative;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     display: flex;
     justify-content: center;
 }

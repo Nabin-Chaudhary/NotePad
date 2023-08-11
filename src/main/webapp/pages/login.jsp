@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="com.model.User"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,9 +18,7 @@ User user = (User)session.getAttribute("user");
 if(user != null){
 	response.sendRedirect("Home.jsp");
 }
-if(user == null){
-	response.sendRedirect("login.jsp");
-}
+
 %>
 
 
@@ -31,7 +30,7 @@ if(user == null){
 					<i class="fa-solid fa-graduation-cap"></i>
 				</div>
 				<div class="text">
-					<a href="index.jsp">ENotes</a>
+					<a href="../index.jsp">ENotes</a>
 				</div>
 			</div>
 			<div class="navlinks">
@@ -106,16 +105,28 @@ if(user == null){
 			}
 			%>
 
+             <%
+			String msg1 = (String)session.getAttribute("logMsg");
+			if(msg1 != null){
+				%>
+				<div class="box" style="color:red; font-size:23px"><%=msg1 %></div>
+				
+				<%
+				session.removeAttribute("logMsg");
+			}
+			%>
+             
+
 				<div class="box">
 
-					<label for="">Email</label> <input type="email" name="email"
+					<label>Email</label> <input type="email" name="email"
 						placeholder="Enter Email: ">
 
 				</div>
 
 				<div class="box">
 
-					<label for="">Password</label> <input type="password"
+					<label>Password</label> <input type="password"
 						name="password" placeholder="Enter Password: ">
 
 				</div>

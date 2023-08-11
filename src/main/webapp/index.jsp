@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="com.Db.DbConnection"%>
-
+<%@ page import = "com.model.User" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +14,14 @@
 <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+
+<%
+User user = (User)session.getAttribute("user");
+if(user != null){
+	response.sendRedirect("pages/Home.jsp");
+}
+
+%>
 
 
 
@@ -28,14 +36,14 @@
 				</div>
 			</div>
 			<div class="navlinks">
-				<a href="Home.jsp">
+				<a href="pages/Home.jsp">
 					<div class="img">
 						<i class="fa-solid fa-house"></i>
 					</div>
 					<div class="text">
 						<h3>Home</h3>
 					</div>
-				</a> <a href="AddNotes.jsp">
+				</a> <a href="pages/AddNotes.jsp">
 					<div class="img">
 						<i class="fa-solid fa-cart-plus"></i>
 					</div>

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import = "com.model.User" %>
+<%@ page import = "javax.servlet.http.HttpSession" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +15,9 @@
 
 <%User user = (User)session.getAttribute("user");
 if(user == null){
-	response.sendRedirect("login.jsp");
+	HttpSession logSession = request.getSession();
+	logSession.setAttribute("logMsg","Please Login!!");
+	response.sendRedirect(request.getContextPath()+"/pages/login.jsp");
 }
 
 
@@ -28,7 +31,7 @@ if(user == null){
 					<i class="fa-solid fa-graduation-cap"></i>
 				</div>
 				<div class="text">
-					<a href="index.jsp">ENotes</a>
+					<a href="../index.jsp">ENotes</a>
 				</div>
 			</div>
 			<div class="navlinks">
@@ -60,9 +63,15 @@ if(user == null){
 					<div class="img">
 						<i class="fa-solid fa-right-to-bracket"></i>
 					</div>
+					<%
+					if(user != null){
+						%>
 					<div class="text">
 						<h3><%=user.getName() %></h3>
 					</div>
+						<%
+					}
+					%>
 				</a> <a href="../LogOutServlet">
 					<div class="img">
 						<i class="fa-solid fa-address-book"></i>
@@ -91,7 +100,7 @@ if(user == null){
 				<div class="text">
 					<h3>Add Notes</h3>
 				</div>
-			</a> <a href="#">
+			</a> <a href="ShowNotes.jsp">
 				<div class="img">
 					<i class="fa-solid fa-address-book"></i>
 				</div>

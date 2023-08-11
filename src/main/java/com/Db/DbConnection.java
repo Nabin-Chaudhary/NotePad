@@ -15,7 +15,7 @@ public class DbConnection {
 		try {
 			if (con == null) {
 
-				Class.forName("com.mysql.jdbc.Driver");
+				Class.forName("com.mysql.cj.jdbc.Driver");
 				String url = "jdbc:mysql://localhost:3306/enotes";
 				con = DriverManager.getConnection(url, "root", "");
 
